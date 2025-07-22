@@ -1,0 +1,88 @@
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, "html.parser")
+
+def collect_title():
+    title = soup.find('title').string
+    print("Titre du livre:",title)
+    return title
+
+def collect_element():
+    product_element = soup.find_all('td')
+    list_element = []
+    for element in product_element:
+        list_element.append(element.get_text())
+    
+    print("Universal product code (upc):",list_element[0])
+    print("Price including tax:",list_element[3])
+    print("Price excluding tax:", list_element[2])
+    print("Number_available:",list_element[5])
+    return list_element[0], list_element[3], list_element[2], list_element[5], list_element
+    
+def collect_description():
+    product_page = soup.find('article', class_='product_page')
+    list_element_product_page = []
+
+    for element in product_page:
+        list_element_product_page.append(element.get_text())
+    print("La description est:\n",list_element_product_page[7])
+    return list_element_product_page[7]
+
+def collect_category():
+    category = soup.find_all('a')
+    list_category = []
+    
+    for element in category:
+        list_category.append(element.get_text())
+    print(list_category[-1])
+    print(list_category[-2])
+    return list_category[-1], list_category[-2]
+
+def collect_review_rating():
+    dict_star_rating = {"One": 1, "Two": 2, "Three": 3, "Four": 4, "Five": 5}
+    
+    all_p = soup.find_all('p') # Itération sur tous les paragraphes
+    paragraphe_review = all_p[2] # Récupération du paragraphe contenant les avis
+        
+    class_star_rating = paragraphe_review.attrs.values() 
+    # Utilisation de attrs.values() car la variable est de type dictionnaire 
+    # pour la récupération des valeurs du dictionnaire "Star-rating" et three"
+    list_star_rating = list(class_star_rating) #Conversion en liste
+    liste_initial = list_star_rating[0] # Récupération d'une des 2 listes imbriquées/Conversion en une seule liste
+    star_rating = liste_initial[-1] # Récupération du nombre d'étoile
+
+    for values in dict_star_rating: # Boucle dans le dictionnaire pour convertir le "str" en "int"
+        if star_rating == values:
+            star_rating = dict_star_rating[values]
+    # print(star_rating)
+    return star_rating
+
+def collect_image():
+    image = soup.find('img') # Récupération de la balise img 
+    # print(image.attrs.values())
+    # print(len(list(image.attrs.values())))
+    list_image = list(image.attrs.values()) # Conversion en liste de la valeur récupérée dans le dictionnaire
+    print(list_image[0]) # Récupération du chemin menant à l'image
+    return list_image[0]
+
+if __name__=="__main__":
+    collect_title()
+    print()
+    print("Information sur le produit:")    
+    print()
+    collect_element()
+    print()
+    collect_description()
+    print()
+    print("Note du livre: ",collect_review_rating())
+    print()
+    print("Récupération du lien de l'image",collect_image())
+
+
+
+
+
+
