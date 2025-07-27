@@ -93,10 +93,10 @@ en_tete = ['product_page_url','universal_ product_code (upc)', 'price_including_
         'category', 'review_rating', 'image_url']
 
 #Création du fichier csv 
-"""with open("data.csv", "w", newline="") as csv_file:
+with open("data.csv", "w", newline="") as csv_file:
     writer = csv.writer(csv_file, delimiter=',')
     writer.writerow(en_tete)
-    writer.writerow(informations_book)"""
+    writer.writerow(informations_book)
 
 
 
