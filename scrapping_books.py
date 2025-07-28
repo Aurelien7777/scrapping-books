@@ -85,7 +85,9 @@ def collect_image():
 
 
 #Récupération des datas de toutes les fonctions dans une liste
-informations_book = [url, collect_UPC(), collect_price_including_tax(), collect_price_excluding_tax(), collect_availability(), collect_title(), collect_description(), collect_category(), collect_review_rating(), collect_image()]
+informations_book = [url, collect_UPC(), collect_price_including_tax(), collect_price_excluding_tax(), 
+                    collect_availability(), collect_title(), collect_description(), collect_category(), 
+                     collect_review_rating(), collect_image()]
 
 #Création des en-têtes pour le fichier csv
 en_tete = ['product_page_url','universal_ product_code (upc)', 'price_including_tax',
