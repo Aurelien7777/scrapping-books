@@ -114,14 +114,5 @@ with open("data_txt.txt", "w", newline="") as txt_file:
         writer_txt = txt_file.write(f"{url}\n\n")
 
 
-#Création du fichier CSV
-"""with open("data_book.csv", "w", newline="") as csv_file:
-    writer = csv.writer(csv_file) #Creation de l'objet "writer"
 
-    compteur = 0
-    for url_collected in list_all_url:
-        compteur += 1
-        #print(f"URL numéro {compteur}: ",url_collected)
-        #print()
-        writer.writerow(url_collected) """
         
