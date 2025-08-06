@@ -33,7 +33,6 @@ Le script :
 1. Cloner le projet :
 
 git clone https://github.com/Aurelien7777/scrapping-books.git
-cd scrapping-books
 
 
 2. Créer et activer un environnement virtuel :
