@@ -50,7 +50,7 @@ pip install -r requirements.txt
 
 ## 3. Comment exécuter le script
 Lancer le script principal depuis la racine du projet :
-python scrapping_refacforisé.py
+python scrapping_total_final.py
 
 Le script :
 
