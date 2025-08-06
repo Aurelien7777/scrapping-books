@@ -4,8 +4,7 @@
 Ce projet a été développé dans le cadre du parcours **OpenClassrooms — Utilisez les bases de Python pour l'analyse de marché**.
 
 ### Mission
-Vous êtes **analyste marketing chez Books Online**, une librairie en ligne spécialisée dans les livres d'occasion.  
-Afin de gagner du temps dans la surveillance des prix des concurrents, ce projet met en place un **scraper Python** pour le site [Books to Scrape](https://books.toscrape.com/), permettant d’extraire automatiquement les données suivantes :
+Ce projet met en place un **scraper Python** pour le site [Books to Scrape](https://books.toscrape.com/), permettant d’extraire automatiquement les données suivantes :
 
 - URL de la page produit
 - UPC (Universal Product Code)
@@ -21,8 +20,6 @@ Le script :
 - **Collecte** les données pour toutes les catégories du site
 - **Enregistre** un fichier CSV par catégorie dans le dossier `COLLECT_DATA`
 - **Télécharge** toutes les images dans un dossier spécifique par catégorie
-
-⚠️ **Les fichiers CSV et images ne doivent pas être versionnés sur GitHub** — ils sont générés à l’exécution.
 
 
 ## 2. Instructions d’installation
@@ -73,20 +70,21 @@ Télécharge et enregistre toutes les données et images localement.
 - IMAGE_CATEGORY_<nom_catégorie>/ (généré)	=  Contient les images par catégorie
 - README.md	=  Documentation du projet
 
+
 ## 5. Contact / Ressources pour aide
 
 Auteur : Amorin Aurélien
-E-mail : Aurélien.amorin@gmail.com
+E-mail : Aurelien.amorin@gmail.com
 
 Ressources utilisées :
 
-- Documentation Python
+- Documentation Python : https://docs.python.org/fr/3/
 
-- Requests
+- Requests : https://requests.readthedocs.io/
 
-- BeautifulSoup4
+- BeautifulSoup4 : https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
-- Books to Scrape
+- Books to Scrape : https://books.toscrape.com/
 
 
 
