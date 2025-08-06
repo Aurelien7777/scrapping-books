@@ -1,4 +1,4 @@
-# 📚 Books Online — Système de surveillance des prix (version bêta)
+# Books Online — Système de surveillance des prix (version bêta)
 
 ## 1. Contexte et objectif du projet
 Ce projet a été développé dans le cadre du parcours **OpenClassrooms — Utilisez les bases de Python pour l'analyse de marché**.
