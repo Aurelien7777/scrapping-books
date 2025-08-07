@@ -62,7 +62,7 @@ Télécharge et enregistre toutes les données et images localement.
 
 ## 4. Explication des fichiers importants
 
-- script.py	= Script principal contenant le code de scraping
+-  scrapping_total_final.py	= Script principal contenant le code de scraping
 - requirements.txt	= Liste des dépendances nécessaires au projet
 - .gitignore	=  Fichier pour exclure les fichiers/dossiers non suivis (CSV, images, venv, etc.)
 - COLLECT_DATA/ (généré)	=  Contient les CSV par catégorie
