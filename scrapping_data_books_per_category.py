@@ -40,7 +40,6 @@ def collect_price_excluding_tax():
 
 def collect_UPC():
     informations_products = soup.find('table', class_='table table-striped')
-    #print("Les informations produits récupérés sont: ",informations_products)
     
     for products in informations_products:
         if "<th>UPC</th>" in str(products.find('th')):
@@ -130,7 +129,7 @@ en_tete = ['product_page_url','universal_ product_code (upc)', 'price_including_
 compteur = 0 
 
 #Création du fichier CSV
-with open("data.csv", "w", newline="") as csv_file:
+with open("data_historical_fiction.csv", "w", newline="") as csv_file:
     
     writer = csv.writer(csv_file, delimiter=',')
     writer.writerow(en_tete) #Création de l'entête
@@ -152,6 +151,7 @@ with open("data.csv", "w", newline="") as csv_file:
         #Ecriture dans le fichier CSV
         print(f"Ecriture du fichier {compteur}")
         writer.writerow(informations_book)
+
 
 
 
