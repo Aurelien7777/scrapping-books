@@ -95,54 +95,12 @@ en_tete = ['product_page_url','universal_ product_code (upc)', 'price_including_
         'category', 'review_rating', 'image_url']
 
 #Création du fichier csv 
-with open("data.csv", "w", newline="") as csv_file:
+with open("data_a_light_in_the_attic.csv", "w", newline="") as csv_file:
     writer = csv.writer(csv_file, delimiter=',')
     writer.writerow(en_tete)
     writer.writerow(informations_book)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#2 Test récupération information produit
-"""informations_products = soup.find('table', class_='table table-striped')
-dict_information_product = {}
-
-for products in informations_products:
-    if isinstance(products, Tag):
-        dict_information_product[products.find('th').string] = products.find('td').string 
-
-compteur = 0
-list_information_product = [] 
-for information in dict_information_product.values():
-    compteur += 1
-    print(f"Information numéro{compteur} : {information}")
-    list_information_product.append(information)
-print(list_information_product)
-
-for element in list_information_product:
-    print(element)"""
 
 
 
